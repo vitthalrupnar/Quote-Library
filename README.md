@@ -1,4 +1,5 @@
 # Quote-Library
+
 Responsive Quote App
 
 The Responsive Quote App is a simple yet engaging web application built using HTML, CSS, and JavaScript. It dynamically displays inspirational quotes to motivate users and refresh their minds. The app is designed with a mobile-first approach, ensuring smooth usability across all devices, from smartphones to desktops.

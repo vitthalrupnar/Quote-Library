@@ -1,0 +1,220 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* Title */
+.app-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 1rem auto;
+  text-shadow: 3px 3px 14px gray;
+  position: relative;
+  max-width: 100%;
+}
+.app-title img {
+  width: 100%;
+  max-width: 20rem;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0rem;
+  filter: drop-shadow(15px 15px 10px rgba(0, 0, 0, 0.5));
+}
+span {
+  color: #901e3e;
+}
+
+/* Content container */
+.container {
+  padding: 2rem;
+}
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 7px solid red;
+  margin: 1rem 0;
+  background-color: white;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.084) inset,
+    1px 1px 5px rgb(222, 222, 222);
+  min-height: 10rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.content {
+  padding: 1rem;
+  flex: 1;
+}
+.title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.content-img {
+  height: 100%;
+  max-width: 8rem;
+  object-fit: contain;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin: 1.5rem 0;
+}
+.pagination button {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #aaa;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.pagination button.active {
+  background-color: #000000 !important;
+  border: none;
+  transform: scale(1.1);
+  color: white;
+}
+.pagination button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+}
+.footer-img {
+  width: 8rem;
+  max-width: 20%;
+}
+
+/* 🔹 Tablet (max-width: 992px) */
+@media (max-width: 992px) {
+  .app-title {
+    font-size: 2rem;
+  }
+  .app-title img {
+    width: 100%;
+    max-width: 7rem;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    top: 1rem;
+  }
+
+  .content-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    min-height: auto;
+  }
+
+  .content {
+    padding: 1rem;
+  }
+
+  .content-img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    object-fit: contain;
+  }
+
+  .pagination {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+}
+
+/* 🔹 Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  .app-title {
+    font-size: 1.6rem;
+    margin: 0.5rem auto;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  .app-title img {
+    width: 100%;
+    max-width: 7rem;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    top: 1rem;
+  }
+  .title {
+    font-size: 1rem;
+  }
+
+  .pagination button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .footer-img {
+    width: 7rem;
+  }
+}
+
+/* 🔹 Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .content-container {
+    flex-direction: row;
+    /* position: absolute; */
+    align-items: flex-start;
+    padding: 1rem;
+    min-height: auto;
+  }
+  .app-title {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  .app-title img {
+    width: 100%;
+    max-width: 7rem;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    top: 1rem;
+  }
+  .content {
+    padding: 0.8rem;
+  }
+  .content-img {
+    /* height: 100%;  */
+    width: 23rem;
+    object-fit: contain;
+  }
+  .title {
+    font-size: 0.95rem;
+  }
+
+  .pagination button {
+    padding: 0.3rem 0.7rem;
+    font-size: 0.8rem;
+  }
+
+  .footer-img {
+    width: 5rem;
+  }
+}
